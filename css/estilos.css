@@ -11,3 +11,7 @@
     box-shadow: #ffc107 !important;
     border-radius: #ffc107 !important;
 }
+
+.root {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}

@@ -58,14 +58,12 @@ for (let i = 0; i < categorias.length; i++) {
 for (let i = 0; i < localStorage.length; i++) {
     let categoria = JSON.parse(localStorage.getItem(localStorage.key(i)));
     $("#categoria").append(`<option value="${localStorage.key(i)}">${categoria.nombreCategoria}</option>`);
-    //imprimirAplicaciones(categorias[i]);
+
 }
-//Hasta aquí
-//---------------------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------------------
 
 
-function imprimirAplicaciones(categoria) {
+
+function printApps(categoria) {
     for (let j = 0; j < categoria.aplicaciones.length; j++) {
         let estrellas = '';
         for (let k = 0; k < categoria.aplicaciones[j].calificacion; k++) {
@@ -77,7 +75,7 @@ function imprimirAplicaciones(categoria) {
 
         $("#aplicaciones").append(
             `<div class="col-lg-2 col-md-3 col-6">
-                <div class="card shadow" onclick="detalleAplicacion(${categoria.aplicaciones[j].codigo})">
+                <div class="card shadow" onclick="detailApp(${categoria.aplicaciones[j].codigo})">
                     <div class="card-body">
                         <img src="${categoria.aplicaciones[j].icono}" class="img-fluid">
                         <div class="texto-aplicacion">${categoria.aplicaciones[j].nombre}</div>
@@ -89,14 +87,13 @@ function imprimirAplicaciones(categoria) {
     }
 }
 
-function seleccionarCategoria() {
+function selectCategory() {
     $("#aplicaciones").html("");
     console.log('Categoria seleccionada: ' + $("#categoria").val());
-    imprimirAplicaciones(JSON.parse(localStorage.getItem($("#categoria").val())));
+    printApps(JSON.parse(localStorage.getItem($("#categoria").val())));
 }
 
-function detalleAplicacion(codigoAplicacion) {
-    //¿Cual es la aplicacion?
+function detailApp(codigoAplicacion) {
     $('#modal-detalle').modal('show');
     console.log("Categoria: " + $('#categoria').val());
     console.log("Codigo Aplicacion: " + codigoAplicacion);
@@ -132,17 +129,17 @@ function detalleAplicacion(codigoAplicacion) {
 }
 
 
-//NO BORRAR: Llenar selectlist de imagenes del formulario agregar aplicacion 
+
 (() => {
     for (let i = 1; i <= 50; i++)
         $('#icono').append(`<option value="img/app-icons/${i}.webp">${i}.webp</option>`);
     $('#icono').val(null);
 })();
 
-//NO BORRAR: Funcionalidad para mostrar la imagen del app al seleccionarla del select list
-function visualizarImagen() {
+
+function viewImage() {
     if ($('#icono').val() != "")
         $('#formImagenApp').attr('src', $('#icono').val());
     else
-        $('#formImagenApp').attr('src', 'img/app-icons/null.png');
+        $('#formImagenApp').attr('src', 'img/meme.jpg');
 }
