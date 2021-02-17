@@ -1,0 +1,13 @@
+.card-body:hover {
+    background-color: #ffc107;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.form-control:focus {
+    border-color: #ffc107 !important;
+    box-shadow: #ffc107 !important;
+    border-radius: #ffc107 !important;
+}
