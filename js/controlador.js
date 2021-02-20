@@ -21,7 +21,7 @@ var categorias = [];
             descripcion: textosDePrueba[Math.floor(Math.random() * (5 - 1))],
             aplicaciones: []
         };
-        for (let j = 0; j < 10; j++) { //Generar 10 apps por categoria
+        for (let j = 0; j < 7; j++) { //Generar 7 apps por categoria
             let aplicacion = {
                 codigo: contador,
                 nombre: "App " + contador,
@@ -142,4 +142,22 @@ function viewImage() {
         $('#formImagenApp').attr('src', $('#icono').val());
     else
         $('#formImagenApp').attr('src', 'img/meme.jpg');
+}
+
+// Funcion para guardar una app al seleccionar una categoria
+
+// Funcion para guardar una app
+
+function guardarApp() {
+    const app = {
+        nombre: document.getElementById('nombre').value,
+        descripcion: document.getElementById('descripcion').value,
+        icono: document.getElementById('icono').value,
+        calificacion: document.getElementById('calificacion').value,
+        descargas: document.getElementById('descargas').value,
+        desarrollador: document.getElementById('desarrollador').value
+    }
+    console.log(app);
+    $('#modal-nueva-app').modal('hide');
+
 }

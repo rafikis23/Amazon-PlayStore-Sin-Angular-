@@ -113,13 +113,13 @@
                             <input class="form-control" type="text" id="nuevoComentario" placeholder="Nuevo comentario">
                         </div>
                         <div class="col-2">
-                            <button type="button" class="btn btn-warning"><i class="fa fa-paper-plane"></i></button>
+                            <button type="button" class="btn btn-outline-dark"><i class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Instalar</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Instalar</button>
 
 
                 </div>
@@ -143,7 +143,7 @@
                                 <textarea class="form-control" type="text" name="descripcion" id="descripcion" placeholder="Descripción"></textarea>
                                 <input class="form-control" type="text" name="desarrollador" id="desarrollador" placeholder="Desarrollador">
                                 <input class="form-control" type="text" name="descargas" id="descargas" placeholder="Descargas">
-                                <input class="form-control" type="text" name="calificacion" id="calificacion" placeholder="Calificacion">
+                                <input class="form-control" type="number" max="5" min="0" name="calificacion" id="calificacion" placeholder="Calificacion">
                             </form>
                         </div>
                     </div>
@@ -152,16 +152,16 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-warning">Guardar</button>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-nueva-app" onclick=" guardarApp() ">Guardar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/controlador.js"></script>
+    <script src="js/jquery-3.4.1.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/controlador.js "></script>
 </body>
 
 </html>

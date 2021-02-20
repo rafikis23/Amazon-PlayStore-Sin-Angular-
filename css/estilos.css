@@ -8,6 +8,29 @@
     background-color: black !important;
 }
 
+.btn-outline-secondary {
+    border-color: #6c757d !important;
+    border-radius: #6c757d !important;
+    box-shadow: #6c757d !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d !important;
+    color: whitesmoke !important;
+}
+
+.btn-outline-dark {
+    border-color: #ffc107 !important;
+    border-radius: #ffc107 !important;
+    box-shadow: #ffc107 !important;
+    color: black !important;
+}
+
+.btn-outline-dark:hover {
+    background-color: #ffc107 !important;
+    color: whitesmoke !important;
+}
+
 .form-control:focus {
     border-color: #ffc107 !important;
     box-shadow: #ffc107 !important;
