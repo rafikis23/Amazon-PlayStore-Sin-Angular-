@@ -1,5 +1,6 @@
 .card-body:hover {
     background-color: #ffc107;
+    color: whitesmoke !important;
 }
 
 .bg-dark {
